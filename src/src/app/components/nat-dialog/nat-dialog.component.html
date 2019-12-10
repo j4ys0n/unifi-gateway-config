@@ -1,0 +1,61 @@
+<h2 mat-dialog-title>nat rule</h2>
+
+<form mat-dialog-content [formGroup]="form">
+  <fieldset>
+    <mat-form-field>
+      <input matInput placeholder="description" formControlName="description">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="destination address" formControlName="destinationAddress">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="destination port" formControlName="destinationPort">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="inbound interface" formControlName="inboundInterface">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="inside address" formControlName="insideAddress">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="outbound interface" formControlName="outboundInterface">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="outside address" formControlName="outsideAddress">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="source" formControlName="source">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="logging" formControlName="log">
+        <mat-option value="enable">enable</mat-option>
+        <mat-option value="disable">disable</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select matInput placeholder="protocol" formControlName="protocol">
+        <mat-option value="all">all</mat-option>
+        <mat-option value="tcp">tcp</mat-option>
+        <mat-option value="udp">udp</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="rule type" formControlName="type">
+        <mat-option value="source">source</mat-option>
+        <mat-option value="destination">destination</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </fieldset>
+</form>
+<div mat-dialog-actions>
+  <button mat-raised-button
+    class="" color="secondary"
+    (click)="close()">
+    cancel
+  </button>
+  <button mat-raised-button
+    class="" color="primary"
+    (click)="save()">
+    save
+  </button>
+</div>

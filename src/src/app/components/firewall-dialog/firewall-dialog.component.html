@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>firewall rule</h2>
+
+<form mat-dialog-content [formGroup]="form">
+  <fieldset>
+    <mat-form-field>
+      <input matInput placeholder="description" formControlName="description">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="action" formControlName="action">
+        <mat-option value="accept">accept</mat-option>
+        <mat-option value="deny">deny</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="destination address" formControlName="destinationAddress">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="destination port" formControlName="destinationPort">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="logging" formControlName="log">
+        <mat-option value="enable">enable</mat-option>
+        <mat-option value="disable">disable</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select matInput placeholder="protocol" formControlName="protocol">
+        <mat-option value="tcp">tcp</mat-option>
+        <mat-option value="udp">udp</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </fieldset>
+</form>
+<div mat-dialog-actions>
+  <button mat-raised-button
+    class="" color="secondary"
+    (click)="close()">
+    cancel
+  </button>
+  <button mat-raised-button
+    class="" color="primary"
+    (click)="save()">
+    save
+  </button>
+</div>
