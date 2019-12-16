@@ -12,10 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libc6-dev \
     g++-multilib \
     automake \
-    libssl1.0-dev \
-    libsasl2-dev \
-    libsasl2-modules \
-    librdkafka-dev vim \
+    ca-certificates \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
