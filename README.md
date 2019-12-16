@@ -8,4 +8,8 @@
 
 `npm install`
 
-`npm start` or `npm run test`
+for dev, run in two separate terminal sessions
+
+to start the server: `npm start`
+
+to start the front-end: `npm run front-end`
